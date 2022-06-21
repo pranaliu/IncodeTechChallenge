@@ -1,8 +1,8 @@
 package com.incode;
 
-
 import java.awt.Rectangle;
 import java.util.Optional;
+
 
 
 import javafx.application.Application;
@@ -132,7 +132,7 @@ public class TowersOfHanoi extends Application {
         	    @Override
         	    public void changed(ObservableValue<? extends String> observable, String oldValue, 
         	        String newValue) {
-        	        if (newValue.matches("\\d*") ) {
+        	        if ( !newValue.isEmpty() && (newValue.matches("\\d*") )) {
         	    
         	        	disks = Integer.parseInt(newValue);
         	            
@@ -322,7 +322,7 @@ public class TowersOfHanoi extends Application {
                 	stepCount = 0;
                 	//solve(disks,0,1,2); // Move n disks from pile 0 to pile 2. Helper tower is last one and target is middle one.
                 	solve(disks,0,2,1); // Move n disk from pile 0 to pile 1. Helper tower is middle one and target is last one.
-                	//System.out.print("Step Count is:"+ stepCount);
+                	//System.out.print("Step Count is:" + stepCount);
                 	calcMoves();
                 	     // When solution is done, give the user a chance to see it,
                         // and make them click RESTART to continue with a new solution.
@@ -530,6 +530,7 @@ public class TowersOfHanoi extends Application {
     
     //Add New label for showing number of total moves in Game
     private void calcMoves() {
+    	Platform.runLater( () -> {
     	   String steps = String.valueOf(stepCount);
     	   //g.setFill(BORDER_COLOR);
     	  // g.fillRect(200,15,30,25);
@@ -537,6 +538,7 @@ public class TowersOfHanoi extends Application {
     	    g.setFill(DISK_COLOR);
     	   g.fillText(textAdd, 30, 15);
     	  // g.fillText(steps, 185,10);
+    	   });
     	
       
     }
