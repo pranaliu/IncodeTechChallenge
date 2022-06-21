@@ -153,7 +153,7 @@ public class TowersOfHanoi extends Application {
          	if (disks < 3 || disks > 10 )
          		
             {
-            	 Alert alert = new Alert(Alert.AlertType.WARNING, "Please Enter disks between 3 and 10", ButtonType.OK, ButtonType.CANCEL);
+            	 Alert alert = new Alert(Alert.AlertType.WARNING, "Please enter disks between number 3 and 10", ButtonType.OK, ButtonType.CANCEL);
 
             	 DialogPane root = alert.getDialogPane();
 
@@ -562,7 +562,7 @@ public class TowersOfHanoi extends Application {
         peg[0]=new Rectangle(10,190,130,5);
         peg[1]=new Rectangle(150,190,130,5);
         peg[2]=new Rectangle(290,190,130,5);
-        
+      
         
         
         for(int i=0;i<3;i++)
