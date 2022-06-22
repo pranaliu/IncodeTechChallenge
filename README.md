@@ -11,4 +11,3 @@
 # applications.
 # Java 9 includes the jmod and jlink tools, which are capable of creating a file tree with an executable shell script or .bat file. A major advantage is #that you can build such a tree for any platform, regardless of your own platform, if you unpackage the foreign platform’s JDK on your machine. Another 
 # advantage is that the user doesn’t need to have Java installed at all. A disadvantage is that the script requires a terminal, unless running on Linux.
-
