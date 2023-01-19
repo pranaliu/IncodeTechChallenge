@@ -1,4 +1,4 @@
-# Incode Tech Challenge - Tower of Hanoi Game
+#Tower of Hanoi Game
 This Program illustrates GUI representation of tower of Hanoi Game.
 Minimum disks needed for this game are 3. Maximum disks program can accept is 10. 
 However this program is scalable and can take higher positive number of disks too.
